@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ClienteRequest;
+use App\Http\Requests\ClienteUpdateRequest;
 use App\Http\Resources\ClienteCollection;
 use App\Http\Resources\ClienteResource;
 use Illuminate\Http\Request;
@@ -118,7 +119,7 @@ class ClientesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function update(ClienteRequest $request, Cliente $cliente)
+    public function update(ClienteUpdateRequest $request, Cliente $cliente)
     {
         $cliente->update($request->all());
 
